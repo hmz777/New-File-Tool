@@ -28,6 +28,11 @@ namespace NewFileTool
             if (MyHwnd == null)
                 return default;
 
+            //To get the Shell type, the ShellWindows type and the InternetExplorer type reference the following COM libraries:
+            //1- Microsoft Shell Controls And Automation
+            //2- Microsoft Internet Controls
+            //Note: You don't have to reference them i only did it for intellisense, you can just leave them as dynamic and compile.
+
             var t = Type.GetTypeFromProgID("Shell.Application");
             Shell o = (Shell)Activator.CreateInstance(t);
             try
