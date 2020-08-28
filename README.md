@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="200px" height="200px" src="https://i.imgur.com/9eD84sP.png" />
+</p>
+
 # New-File-Tool
 Basically this is a tool that lets you create empty files on the fly wherever you want.
 
@@ -23,4 +27,4 @@ This project references the following COM libraries:
 - Microsoft Shell Controls And Automation
 - Microsoft Internet Controls
 
-You don't have to reference them, i only did it to expose the **Shell, ShellWindows, InternetExplorer** types in the [Tools](https://github.com/hmz777/New-File-Tool/blob/master/Helpers/Tools.cs) Class for intellisense purposes only, you can just leave them as dynamic and compile. See [here](https://github.com/hmz777/New-File-Tool/blob/33dbba8669db3ca1067573a9ce17839c6b3471a2/Helpers/Tools.cs#L32)
+You don't have to reference them, i only did it to expose the **Shell, ShellWindows, InternetExplorer** types in the [Tools](https://github.com/hmz777/New-File-Tool/blob/master/Helpers/Tools.cs) Class for intellisense purposes only, you can just leave them as dynamic and compile. See [here](https://github.com/hmz777/New-File-Tool/blob/33dbba8669db3ca1067573a9ce17839c6b3471a2/Helpers/Tools.cs#L32).
