@@ -16,7 +16,7 @@ Well since Windows 10 v2004, Microsoft removed the txt file from the "New" Conte
 that aren't present in the New Context menu and adding every file that i want to the menu using the registry ShellNew key was ugly so i created this tool.
 
 # How?
-The app uses Pinvoke to grab the **Active Windows Explorer** window you're working in, get the path that is open in it and set it as path that you'll be creating paths relative to.
+The app uses Pinvoke to grab the **Active Windows Explorer** window you're working in, get the path that is open in it and set it as the path that you'll be creating paths relative to.
 If it doesn't find an **Active** explorer.exe window it creates your file on the desktop directory.
 
 # Features
