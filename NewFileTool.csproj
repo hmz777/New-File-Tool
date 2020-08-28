@@ -50,20 +50,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Extensions.cs" />
-    <Compile Include="FileProcessor.cs" />
-    <Compile Include="HotKeyHelper.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Helpers\Extensions.cs" />
+    <Compile Include="MainLogic\FileProcessor.cs" />
+    <Compile Include="Helpers\HotKeyHelper.cs" />
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NativeMethods.cs" />
-    <Compile Include="Tools.cs" />
+    <Compile Include="Helpers\NativeMethods.cs" />
+    <Compile Include="Helpers\Tools.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
