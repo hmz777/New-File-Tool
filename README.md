@@ -17,12 +17,12 @@ that aren't present in the New Context menu and adding every file that i want to
 
 # How?
 The app uses Pinvoke to grab the **Active Windows Explorer** window you're working in, get the path that is open in it and set it as the path that you'll be creating paths relative to.
-If it doesn't find an **Active** explorer.exe window it creates your file on the desktop directory.
+If it doesn't find an **Active** "explorer.exe" window it creates your file on the desktop directory.
 
 # Features
 - The app registers a System-wide Hot Key (L-Shift + Q), a combination of keys that when pressed can activate the app and bring it to the top most.
 - Can create full paths not just files i.e, "dir\file.txt" creates a directory with the name "dir" and "file.txt" inside it. 
-- If you don't have an "explorer.exe" window open or you're in a special system folder like the root directory "This PC" or "Recycle Bin" the app creates your file on desktop.
+- If you don't have an **active** "explorer.exe" window or you're in a special system folder like the root directory "This PC" or "Recycle Bin" the app creates your file on desktop.
 - The app starts minimized with a tray icon and can be brought to front via the tray context menu with the "Show" button or via the defined Hot Key.
 
 # Notes
