@@ -8,7 +8,7 @@
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/hmz777/New-File-Tool?color=green&style=flat-square">
 </p>
 
-# New-File-Tool
+# New File Tool
 Basically this is a tool that lets you create empty files on the fly wherever you want.
 
 # Why?
