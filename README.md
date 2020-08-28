@@ -1,6 +1,9 @@
 <p align="center">
   <img width="200px" height="200px" src="https://i.imgur.com/9eD84sP.png" />
 </p>
+<p align="center">
+  <img alt="GitHub" src="https://img.shields.io/github/license/hmz777/New-File-Tool?color=blue&style=flat-square">
+</p>
 
 # New-File-Tool
 Basically this is a tool that lets you create empty files on the fly wherever you want.
