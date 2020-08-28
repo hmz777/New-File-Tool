@@ -36,5 +36,6 @@ This project references the following COM libraries:
 You don't have to reference them, i only did it to expose the **Shell, ShellWindows and InternetExplorer** types in the [Tools](https://github.com/hmz777/New-File-Tool/blob/master/Helpers/Tools.cs) Class for intellisense purposes only, you can just leave them as dynamic and compile. See [here](https://github.com/hmz777/New-File-Tool/blob/33dbba8669db3ca1067573a9ce17839c6b3471a2/Helpers/Tools.cs#L32).
 
 # Upcoming Features
-- I will be adding file attribute flags so you can mark the file as hidden, system or readonly. Something like this: ***\dir1\dir2\file.txt -h -s -r***  
+- I will be adding file attribute flags so you can mark the file as hidden, system or readonly.
+Something like this: ***\dir1\dir2\file.txt -h -s -r***  
 - An option for entering absolute paths instead of relative ones. 
