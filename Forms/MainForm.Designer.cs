@@ -38,6 +38,8 @@
             this.TrayContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TrayShow = new System.Windows.Forms.ToolStripMenuItem();
             this.TrayExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.HelpButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.HelpToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.TrayContextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +47,7 @@
             // 
             this.Filename.Depth = 0;
             this.Filename.Hint = "File Name";
-            this.Filename.Location = new System.Drawing.Point(12, 83);
+            this.Filename.Location = new System.Drawing.Point(12, 87);
             this.Filename.MaxLength = 32767;
             this.Filename.MouseState = MaterialSkin.MouseState.HOVER;
             this.Filename.Name = "Filename";
@@ -64,7 +66,7 @@
             this.CreateButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.CreateButton.Depth = 0;
             this.CreateButton.Icon = null;
-            this.CreateButton.Location = new System.Drawing.Point(388, 76);
+            this.CreateButton.Location = new System.Drawing.Point(420, 80);
             this.CreateButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.CreateButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.CreateButton.Name = "CreateButton";
@@ -82,7 +84,7 @@
             this.CloseButton.Depth = 0;
             this.CloseButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.CloseButton.Icon = null;
-            this.CloseButton.Location = new System.Drawing.Point(477, 76);
+            this.CloseButton.Location = new System.Drawing.Point(502, 80);
             this.CloseButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.CloseButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.CloseButton.Name = "CloseButton";
@@ -106,6 +108,7 @@
             // 
             // TrayIcon
             // 
+            this.TrayIcon.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.TrayIcon.BalloonTipText = "New File Tool is active!";
             this.TrayIcon.BalloonTipTitle = "New File Tool";
             this.TrayIcon.ContextMenuStrip = this.TrayContextMenu;
@@ -124,16 +127,44 @@
             // TrayShow
             // 
             this.TrayShow.Name = "TrayShow";
-            this.TrayShow.Size = new System.Drawing.Size(180, 22);
+            this.TrayShow.Size = new System.Drawing.Size(103, 22);
             this.TrayShow.Text = "Show";
             this.TrayShow.Click += new System.EventHandler(this.TrayShow_Click);
             // 
             // TrayExit
             // 
             this.TrayExit.Name = "TrayExit";
-            this.TrayExit.Size = new System.Drawing.Size(180, 22);
+            this.TrayExit.Size = new System.Drawing.Size(103, 22);
             this.TrayExit.Text = "Exit";
             this.TrayExit.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
+            // HelpButton
+            // 
+            this.HelpButton.AutoSize = true;
+            this.HelpButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.HelpButton.Depth = 0;
+            this.HelpButton.Icon = null;
+            this.HelpButton.Location = new System.Drawing.Point(381, 80);
+            this.HelpButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.HelpButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.HelpButton.Name = "HelpButton";
+            this.HelpButton.Primary = false;
+            this.HelpButton.Size = new System.Drawing.Size(28, 36);
+            this.HelpButton.TabIndex = 4;
+            this.HelpButton.Text = "?";
+            this.HelpToolTip.SetToolTip(this.HelpButton, "Syntax:\r\nFilename only: \"filename.ext\"\r\nPath: \"dir\\dir\\filename.ext\"\r\nFile with f" +
+        "lags: \"filename.ext > -h -s- r\"\r\nPath with flags: \"dir\\dir\\filename.ext > -h -s " +
+        "-r\"");
+            this.HelpButton.UseVisualStyleBackColor = true;
+            // 
+            // HelpToolTip
+            // 
+            this.HelpToolTip.AutoPopDelay = 10000;
+            this.HelpToolTip.InitialDelay = 100;
+            this.HelpToolTip.IsBalloon = true;
+            this.HelpToolTip.ReshowDelay = 100;
+            this.HelpToolTip.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.HelpToolTip.ToolTipTitle = "Help";
             // 
             // MainForm
             // 
@@ -141,7 +172,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CloseButton;
-            this.ClientSize = new System.Drawing.Size(553, 142);
+            this.ClientSize = new System.Drawing.Size(579, 142);
+            this.Controls.Add(this.HelpButton);
             this.Controls.Add(this.StatusText);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.CreateButton);
@@ -174,6 +206,8 @@
         private System.Windows.Forms.ContextMenuStrip TrayContextMenu;
         private System.Windows.Forms.ToolStripMenuItem TrayShow;
         private System.Windows.Forms.ToolStripMenuItem TrayExit;
+        private MaterialSkin.Controls.MaterialFlatButton HelpButton;
+        public System.Windows.Forms.ToolTip HelpToolTip;
     }
 }
 

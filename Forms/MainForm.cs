@@ -1,4 +1,5 @@
 ﻿using MaterialSkin.Controls;
+using NewFileTool.MainLogic;
 using System;
 using System.Diagnostics;
 using System.Linq;
@@ -31,16 +32,52 @@ namespace NewFileTool
                 return;
             }
 
-            WindowState = FormWindowState.Minimized;
-            TrayIcon.Visible = true;
-            Hide();
-
             Process[] processes = Process.GetProcessesByName("explorer");
 
             if (processes.Length == 0)
                 return;
 
-            FileProcessor.ProcessFile(Filename.Text);
+            if (Filename.Text.Contains('>'))
+            {
+                var segments = Filename.Text.Trim().Split('>');
+                var path = segments[0].Trim();
+                var flags = segments[1].Trim();
+
+                var Params = FlagParser.ParseFlags(flags);
+
+                if (Params == null)
+                {
+                    StatusText.Text = "Invalid parameters!";
+                    Filename.Focus();
+                    return;
+                }
+
+                WindowState = FormWindowState.Minimized;
+                TrayIcon.Visible = true;
+                Hide();
+
+                FileProcessor.ProcessFile(path, Params);
+
+                Filename.Text = "";
+                StatusText.Text = "";
+            }
+            else
+            {
+                var FName = Filename.Text.Trim();
+
+                if (FName.Split('.')[1].Contains(" ") || FName.Split('.')[1].Length == 0)
+                {
+                    StatusText.Text = "Invalid extension!";
+                    Filename.Focus();
+                    return;
+                }
+
+                WindowState = FormWindowState.Minimized;
+                TrayIcon.Visible = true;
+                Hide();
+
+                FileProcessor.ProcessFile(Filename.Text.Trim());
+            }
         }
 
         private void CloseButton_Click(object sender, EventArgs e)

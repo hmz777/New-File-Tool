@@ -31,6 +31,8 @@ namespace NewFileTool
         }
     }
 
+    #region Not Used
+
     /// <summary>
     /// A utility class to determine a process parent. <see href="https://stackoverflow.com/questions/394816/how-to-get-parent-process-in-net-in-managed-way/3346055">StackOverflow</see>
     /// </summary>
@@ -92,4 +94,6 @@ namespace NewFileTool
             }
         }
     }
+
+    #endregion
 }

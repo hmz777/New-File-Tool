@@ -10,7 +10,7 @@ namespace NewFileTool
 {
     public class FileProcessor
     {
-        public static void ProcessFile(string FileName)
+        public static void ProcessFile(string FileName, Dictionary<string, bool> FileAttributes = null)
         {
             try
             {
@@ -30,8 +30,27 @@ namespace NewFileTool
 
                 FilePath = Path.Combine(path, FileName);
 
-                var file = File.Create(FilePath);
-                file.Dispose();
+                if (!File.Exists(FilePath))
+                {
+                    var file = File.Create(FilePath);
+                    file.Dispose();
+                }
+
+                if (FileAttributes != null)
+                {
+                    var flags = File.GetAttributes(FilePath);
+
+                    if (FileAttributes["Hidden"] == true)
+                        flags |= System.IO.FileAttributes.Hidden;
+
+                    if (FileAttributes["Readonly"] == true)
+                        flags |= System.IO.FileAttributes.ReadOnly;
+
+                    if (FileAttributes["System"] == true)
+                        flags |= System.IO.FileAttributes.System;
+
+                    File.SetAttributes(FilePath, flags);
+                }
             }
             catch (Exception ex)
             {
