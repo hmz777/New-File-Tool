@@ -23,7 +23,6 @@ If it doesn't find an **Active** "explorer.exe" window, it creates your file on 
 - The app registers a System-wide Hot Key (L-Shift + Q), a combination of keys that when pressed can activate the app and bring it to the top most.
 - Can create full paths not just files i.e, "dir\file.txt" creates a directory with the name "dir" and "file.txt" inside it. 
 - You can add file attribute flags so you can mark the file as hidden, system or readonly.
-
 Something like this: ***\dir1\dir2\file.txt -h -s -r***.
 - If you don't have an **active** "explorer.exe" window or you're in a special system folder like the root directory "This PC" or "Recycle Bin" the app creates your file on desktop directory.
 - The app starts minimized with a tray icon and can be brought to front via the tray context menu with the "Show" button or via the defined Hot Key.
