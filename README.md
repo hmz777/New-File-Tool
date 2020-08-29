@@ -3,7 +3,7 @@
 </p>
 <p align="center">
   <img alt="GitHub" src="https://img.shields.io/github/license/hmz777/New-File-Tool?color=blue&style=flat-square">
-  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/hmz777/New-File-Tool?color=orange&style=flat-square">
+  <img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/hmz777/New-File-Tool?color=orange&label=latest%20release&style=flat-square">
   <img alt="GitHub Release Date" src="https://img.shields.io/github/release-date/hmz777/New-File-Tool?color=yellow&style=flat-square">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/hmz777/New-File-Tool?color=green&style=flat-square">
 </p>
