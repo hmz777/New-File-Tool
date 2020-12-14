@@ -40,3 +40,8 @@ You don't have to reference them, i only did it to expose the **Shell, ShellWind
 # Upcoming Features
 - ~~I will be adding file attribute flags so you can mark the file as hidden, system or readonly. Something like this: ***\dir1\dir2\file.txt > -h -s -r***~~ Done! :white_check_mark:
 - An option for entering absolute paths instead of relative ones. 
+
+# Author
+Hamzi Alsheikh
+
+Website: [https://www.hamzialsheikh.tk](https://www.hamzialsheikh.tk)
