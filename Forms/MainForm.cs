@@ -98,7 +98,6 @@ namespace NewFileTool
             if (WindowState == FormWindowState.Minimized)
             {
                 TrayIcon.Visible = true;
-                TrayIcon.ShowBalloonTip(500);
                 Hide();
             }
             else
