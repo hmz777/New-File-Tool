@@ -38,7 +38,7 @@
             this.TrayContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.TrayShow = new System.Windows.Forms.ToolStripMenuItem();
             this.TrayExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.HelpButton = new MaterialSkin.Controls.MaterialFlatButton();
+            this.SyntaxButton = new MaterialSkin.Controls.MaterialFlatButton();
             this.HelpToolTip = new System.Windows.Forms.ToolTip(this.components);
             this.TrayContextMenu.SuspendLayout();
             this.SuspendLayout();
@@ -138,24 +138,24 @@
             this.TrayExit.Text = "Exit";
             this.TrayExit.Click += new System.EventHandler(this.CloseButton_Click);
             // 
-            // HelpButton
+            // SyntaxButton
             // 
-            this.HelpButton.AutoSize = true;
-            this.HelpButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.HelpButton.Depth = 0;
-            this.HelpButton.Icon = null;
-            this.HelpButton.Location = new System.Drawing.Point(381, 80);
-            this.HelpButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.HelpButton.MouseState = MaterialSkin.MouseState.HOVER;
-            this.HelpButton.Name = "HelpButton";
-            this.HelpButton.Primary = false;
-            this.HelpButton.Size = new System.Drawing.Size(28, 36);
-            this.HelpButton.TabIndex = 4;
-            this.HelpButton.Text = "?";
-            this.HelpToolTip.SetToolTip(this.HelpButton, "Syntax:\r\nFilename only: \"filename.ext\"\r\nPath: \"dir\\dir\\filename.ext\"\r\nFile with f" +
+            this.SyntaxButton.AutoSize = true;
+            this.SyntaxButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.SyntaxButton.Depth = 0;
+            this.SyntaxButton.Icon = null;
+            this.SyntaxButton.Location = new System.Drawing.Point(381, 80);
+            this.SyntaxButton.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.SyntaxButton.MouseState = MaterialSkin.MouseState.HOVER;
+            this.SyntaxButton.Name = "SyntaxButton";
+            this.SyntaxButton.Primary = false;
+            this.SyntaxButton.Size = new System.Drawing.Size(28, 36);
+            this.SyntaxButton.TabIndex = 4;
+            this.SyntaxButton.Text = "?";
+            this.HelpToolTip.SetToolTip(this.SyntaxButton, "Syntax:\r\nFilename only: \"filename.ext\"\r\nPath: \"dir\\dir\\filename.ext\"\r\nFile with f" +
         "lags: \"filename.ext > -h -s- r\"\r\nPath with flags: \"dir\\dir\\filename.ext > -h -s " +
         "-r\"");
-            this.HelpButton.UseVisualStyleBackColor = true;
+            this.SyntaxButton.UseVisualStyleBackColor = true;
             // 
             // HelpToolTip
             // 
@@ -173,7 +173,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.CloseButton;
             this.ClientSize = new System.Drawing.Size(579, 142);
-            this.Controls.Add(this.HelpButton);
+            this.Controls.Add(this.SyntaxButton);
             this.Controls.Add(this.StatusText);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.CreateButton);
@@ -206,7 +206,7 @@
         private System.Windows.Forms.ContextMenuStrip TrayContextMenu;
         private System.Windows.Forms.ToolStripMenuItem TrayShow;
         private System.Windows.Forms.ToolStripMenuItem TrayExit;
-        private MaterialSkin.Controls.MaterialFlatButton HelpButton;
+        private MaterialSkin.Controls.MaterialFlatButton SyntaxButton;
         public System.Windows.Forms.ToolTip HelpToolTip;
     }
 }
