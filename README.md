@@ -12,8 +12,7 @@
 Basically, this is a tool that lets you create empty files on the fly wherever you want.
 
 # Why?
-Well since Windows 10 v2004, Microsoft removed the txt file from the "New" Context menu and I always find myself creating .bat and .ps1 files beside .txt files and other file types
-that aren't present in the New Context menu and adding every file that I want to the menu using the registry ShellNew key was ugly so I created this tool.
+Well I always find myself creating .bat and .ps1 files that aren't present in the New Context menu and adding every file that I want to the menu using the registry ShellNew key was ugly so I created this tool.
 
 # How?
 The app uses Pinvoke to grab the **Active Windows Explorer** window you're working in, get the path that is open in it, and set it as the path that you'll be creating paths relative to.
